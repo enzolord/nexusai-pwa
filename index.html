@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusAI - Agence Digitale Moderne avec Intelligence Artificielle</title>
+    <meta name="description" content="Agence digitale spécialisée dans le développement web, applications mobiles et intégration d'IA">
+    <meta name="theme-color" content="#6C63FF">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+      <!-- Favicon et icônes -->
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-brain"></i>
+            <span>NexusAI</span>
+        </div>
+        <nav>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#abonnements">Abonnements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button" id="devisButton">Demander un devis</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>L'avenir du digital, propulsé par l'IA</h1>
+                <p>Nous créons des solutions digitales modernes et intelligentes qui transforment votre entreprise. Sites web, applications mobiles et intégration d'IA pour booster votre productivité.</p>
+                <button class="cta-button" id="discoverButton">Découvrir nos solutions</button>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-element"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-title">
+            <h2>Nos Services</h2>
+            <p>Nous offrons une gamme complète de services digitaux intégrant systématiquement l'intelligence artificielle</p>
+        </div>
+        <div class="services-grid">
+            <!-- Les cartes de services restent identiques -->
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Développement Web</h3>
+                <p>Création de sites web modernes, réactifs et performants avec intégration d'IA pour une expérience utilisateur optimale.</p>
+                <span class="price-tag">À partir de 300 000 FCFA</span>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Applications Mobiles</h3>
+                <p>Développement d'applications iOS et Android natives ou hybrides avec fonctionnalités IA personnalisées.</p>
+                <span class="price-tag">À partir de 1 200 000 FCFA</span>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-robot"></i>
+                <h3>Intégration IA</h3>
+                <p>Audit et intégration de modules IA dans vos processus : chatbots, analyse prédictive, automatisation.</p>
+                <span class="price-tag">À partir de 500 000 FCFA</span>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>E-commerce</h3>
+                <p>Plateformes e-commerce complètes avec recommandations IA, chatbots d'assistance et analyse du comportement.</p>
+                <span class="price-tag">À partir de 800 000 FCFA</span>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Analyse de Données</h3>
+                <p>Solutions d'analyse prédictive et tableaux de bord intelligents pour prendre des décisions éclairées.</p>
+                <span class="price-tag">À partir de 700 000 FCFA</span>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cloud"></i>
+                <h3>Solutions Métier</h3>
+                <p>Développement d'applications métier sur mesure avec automatisation intelligente des processus.</p>
+                <span class="price-tag">À partir de 1 500 000 FCFA</span>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Solutions Section -->
+    <section id="solutions">
+        <div class="section-title">
+            <h2>Nos Solutions</h2>
+            <p>Des packages complets adaptés à vos besoins spécifiques</p>
+        </div>
+        <div class="solutions-container">
+            <div class="solution-tabs">
+                <button class="tab-button active" data-tab="sites">Sites Web</button>
+                <button class="tab-button" data-tab="ecommerce">E-commerce</button>
+                <button class="tab-button" data-tab="applications">Applications</button>
+                <button class="tab-button" data-tab="systemes">Systèmes Métier</button>
+                <button class="tab-button" data-tab="modules">Modules IA</button>
+            </div>
+            
+            <div class="tab-content active" id="sites-tab">
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <h3>Site Vitrine Basique</h3>
+                        <div class="solution-price">300 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Design responsive moderne</li>
+                            <li>5 pages maximum</li>
+                            <li>Formulaire de contact</li>
+                            <li>Optimisation SEO basique</li>
+                            <li>Hébergement 1 an inclus</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Site Vitrine Avancé</h3>
+                        <div class="solution-price">500 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Design sur mesure</li>
+                            <li>Jusqu'à 15 pages</li>
+                            <li>Intégration réseaux sociaux</li>
+                            <li>Optimisation SEO avancée</li>
+                            <li>Chatbot IA basique inclus</li>
+                            <li>Hébergement 1 an inclus</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Site Corporate</h3>
+                        <div class="solution-price">750 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Design premium personnalisé</li>
+                            <li>Pages illimitées</li>
+                            <li>Espace administrateur</li>
+                            <li>Analytics et reporting</li>
+                            <li>Chatbot IA avancé</li>
+                            <li>Maintenance 6 mois incluse</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="ecommerce-tab">
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <h3>Boutique Essentielle</h3>
+                        <div class="solution-price">800 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Jusqu'à 50 produits</li>
+                            <li>Paiement en ligne intégré</li>
+                            <li>Gestion des commandes</li>
+                            <li>Design responsive</li>
+                            <li>Hébergement 1 an inclus</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Boutique Professionnelle</h3>
+                        <div class="solution-price">1 200 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Jusqu'à 500 produits</li>
+                            <li>Multiples méthodes de paiement</li>
+                            <li>Système de recommandation IA</li>
+                            <li>Analytics avancé</li>
+                            <li>Chatbot d'assistance</li>
+                            <li>Maintenance 6 mois incluse</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Marketplace</h3>
+                        <div class="solution-price">1 500 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Multi-vendeurs</li>
+                            <li>Produits illimités</li>
+                            <li>Système de commissions</li>
+                            <li>Recommandations IA avancées</li>
+                            <li>Gestion des avis et notations</li>
+                            <li>Maintenance 1 an incluse</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="applications-tab">
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <h3>Application Basique</h3>
+                        <div class="solution-price">1 200 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Application hybride (iOS & Android)</li>
+                            <li>Interface utilisateur simple</li>
+                            <li>Fonctionnalités essentielles</li>
+                            <li>Publication sur les stores</li>
+                            <li>Support technique 3 mois</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Application Professionnelle</h3>
+                        <div class="solution-price">1 800 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Application native (iOS ou Android)</li>
+                            <li>Design UX/UI personnalisé</li>
+                            <li>Fonctionnalités avancées</li>
+                            <li>Intégration API et services tiers</li>
+                            <li>Analytics et suivi des performances</li>
+                            <li>Support technique 6 mois</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Application Premium</h3>
+                        <div class="solution-price">2 500 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Applications natives (iOS & Android)</li>
+                            <li>Design premium et expérience utilisateur optimale</li>
+                            <li>Fonctionnalités complexes et personnalisées</li>
+                            <li>Intégration IA avancée</li>
+                            <li>Publication et optimisation stores</li>
+                            <li>Support technique 12 mois</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="systemes-tab">
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <h3>Système Métier Essentiel</h3>
+                        <div class="solution-price">1 500 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Gestion des processus métier</li>
+                            <li>Tableaux de bord basiques</li>
+                            <li>Rapports standards</li>
+                            <li>Interface administrateur</li>
+                            <li>Formation utilisateurs</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Système Métier Avancé</h3>
+                        <div class="solution-price">2 200 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Automatisation des processus</li>
+                            <li>Tableaux de bord interactifs</li>
+                            <li>Rapports personnalisés</li>
+                            <li>Intégration avec systèmes existants</li>
+                            <li>Module d'analyse prédictive basique</li>
+                            <li>Support 6 mois</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Système Métier Entreprise</h3>
+                        <div class="solution-price">3 000 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Automatisation intelligente complète</li>
+                            <li>Tableaux de bord en temps réel</li>
+                            <li>Analytics avancé avec IA</li>
+                            <li>Intégration multi-systèmes</li>
+                            <li>Module d'analyse prédictive avancé</li>
+                            <li>Support 12 mois et formation avancée</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="modules-tab">
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <h3>Chatbot Intelligent</h3>
+                        <div class="solution-price">500 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Configuration et déploiement</li>
+                            <li>Base de connaissances initiale</li>
+                            <li>Intégration site web/app</li>
+                            <li>Personnalisation de l'interface</li>
+                            <li>Formation à l'administration</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Automatisation Documentaire</h3>
+                        <div class="solution-price">700 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Analyse et classification de documents</li>
+                            <li>Extraction de données automatisée</li>
+                            <li>Intégration avec systèmes existants</li>
+                            <li>Workflows de validation</li>
+                            <li>Tableau de bord de suivi</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Analyse Prédictive</h3>
+                        <div class="solution-price">900 000 FCFA</div>
+                        <ul class="solution-features">
+                            <li>Analyse des données historiques</li>
+                            <li>Modèles prédictifs personnalisés</li>
+                            <li>Tableaux de bord interactifs</li>
+                            <li>Alertes et recommandations</li>
+                            <li>Formation à l'utilisation</li>
+                        </ul>
+                        <button class="cta-button">Choisir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abonnements Section -->
+    <section id="abonnements">
+        <div class="section-title">
+            <h2>Abonnements Entreprise</h2>
+            <p>Des formules d'abonnement flexibles pour tous les besoins</p>
+        </div>
+        <div class="subscription-plans">
+            <div class="plan-card">
+                <div class="plan-name">Starter</div>
+                <div class="plan-price">75 000 <span class="plan-period">FCFA/mois</span></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> Maintenance corrective</li>
+                    <li><i class="fas fa-check"></i> Mises à jour de sécurité</li>
+                    <li><i class="fas fa-check"></i> Support par email</li>
+                    <li><i class="fas fa-check"></i> Sauvegarde hebdomadaire</li>
+                    <li><i class="fas fa-times"></i> Support prioritaire</li>
+                    <li><i class="fas fa-times"></i> Développements mineurs</li>
+                </ul>
+                <button class="cta-button">Souscrire</button>
+            </div>
+            <div class="plan-card featured">
+                <div class="plan-badge">Populaire</div>
+                <div class="plan-name">Business</div>
+                <div class="plan-price">150 000 <span class="plan-period">FCFA/mois</span></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> Maintenance corrective et évolutive</li>
+                    <li><i class="fas fa-check"></i> Mises à jour complètes</li>
+                    <li><i class="fas fa-check"></i> Support téléphonique et email</li>
+                    <li><i class="fas fa-check"></i> Sauvegarde quotidienne</li>
+                    <li><i class="fas fa-check"></i> Jusqu'à 5h de développement/mois</li>
+                    <li><i class="fas fa-check"></i> Optimisations SEO mensuelles</li>
+                </ul>
+                <button class="cta-button">Souscrire</button>
+            </div>
+            <div class="plan-card">
+                <div class="plan-name">Enterprise</div>
+                <div class="plan-price">300 000 <span class="plan-period">FCFA/mois</span></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> Maintenance complète</li>
+                    <li><i class="fas fa-check"></i> Support 24/7 prioritaire</li>
+                    <li><i class="fas fa-check"></i> Sauvegarde en temps réel</li>
+                    <li><i class="fas fa-check"></i> Jusqu'à 15h de développement/mois</li>
+                    <li><i class="fas fa-check"></i> Analyses et rapports mensuels</li>
+                    <li><i class="fas fa-check"></i> Accompagnement stratégique</li>
+                </ul>
+                <button class="cta-button">Souscrire</button>
+            </div>
+        </div>
+    </section>
+
+
+
+     <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-title">
+            <h2>Contactez-nous</h2>
+            <p>Discutons de votre projet et trouvons la solution idéale pour votre entreprise</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Nos Coordonnées</h3>
+                <ul class="contact-details">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Adresse</strong>
+                            <p>Douala, Cameroun</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Téléphone</strong>
+                            <p>+237 620 81 920</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p>contact@nexusai.cm</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Horaires d'ouverture</strong>
+                            <p>Lun - Ven: 8h00 - 18h00</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Envoyez-nous un message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service intéressé</label>
+                        <select id="service" class="form-control">
+                            <option value="">Sélectionnez un service</option>
+                            <option value="site-web">Site Web</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="application">Application Mobile</option>
+                            <option value="systeme-metier">Système Métier</option>
+                            <option value="module-ia">Module IA</option>
+                            <option value="abonnement">Abonnement</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Envoyer via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-toggle" id="chatbotToggle">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <i class="fas fa-robot"></i>
+                <h3>Assistant NexusAI</h3>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">
+                    Bonjour ! Je suis l'assistant IA de NexusAI. Comment puis-je vous aider aujourd'hui ?
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Tapez votre message...">
+                <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>NexusAI</h3>
+                <p>L'agence digitale nouvelle génération, spécialisée dans le développement de solutions web et mobiles avec intégration systématique de l'IA.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Développement Web</a></li>
+                    <li><a href="#">Applications Mobiles</a></li>
+                    <li><a href="#">Intégration IA</a></li>
+                    <li><a href="#">E-commerce</a></li>
+                    <li><a href="#">Solutions Métier</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#abonnements">Abonnements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Inscrivez-vous pour recevoir nos dernières actualités et offres exclusives.</p>
+                <div class="chatbot-input">
+                    <input type="email" placeholder="Votre email">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 NexusAI. Tous droits réservés. | Douala, Cameroun</p>
+        </div>
+    </footer>
+
+    <!-- Installation PWA -->
+    <div id="installPrompt" class="install-prompt">
+        <div class="install-content">
+            <p>Installer l'application NexusAI pour une meilleure expérience</p>
+            <div class="install-buttons">
+                <button id="installButton">Installer</button>
+                <button id="cancelInstall">Plus tard</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
