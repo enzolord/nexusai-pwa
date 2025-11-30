@@ -11,24 +11,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Vérification de la présence du manifeste
-function checkManifest() {
-    const manifestLink = document.querySelector('link[rel="manifest"]');
-    if (!manifestLink) {
-        console.warn('Manifeste non trouvé');
-        return;
-    }
-    
-    fetch(manifestLink.href)
-        .then(response => response.json())
-        .then(manifest => {
-            console.log('Manifeste chargé:', manifest);
-        })
-        .catch(error => {
-            console.error('Erreur lors du chargement du manifeste:', error);
-        });
-}
-
 // Gestion de l'installation de la PWA
 let deferredPrompt;
 const installPrompt = document.getElementById('installPrompt');
@@ -36,23 +18,18 @@ const installButton = document.getElementById('installButton');
 const cancelInstall = document.getElementById('cancelInstall');
 
 window.addEventListener('beforeinstallprompt', (e) => {
-    // Empêche le navigateur de montrer l'invite automatique
+    console.log('✅ beforeinstallprompt déclenché');
     e.preventDefault();
-    // Stocke l'événement pour l'utiliser plus tard
     deferredPrompt = e;
     
-    // Vérifie si l'app n'est pas déjà installée
-    if (!isAppInstalled()) {
-        // Montre l'invite personnalisée après un délai
-        setTimeout(() => {
-            if (!localStorage.getItem('installPromptDismissed')) {
-                installPrompt.style.display = 'block';
-            }
-        }, 5000);
-    }
+    // Afficher l'invite après un délai
+    setTimeout(() => {
+        if (!localStorage.getItem('installPromptDismissed') && !isAppInstalled()) {
+            installPrompt.style.display = 'block';
+        }
+    }, 5000);
 });
 
-// Vérifie si l'app est déjà installée
 function isAppInstalled() {
     return window.matchMedia('(display-mode: standalone)').matches || 
            window.navigator.standalone === true;
@@ -62,20 +39,15 @@ if (installButton) {
     installButton.addEventListener('click', async () => {
         if (!deferredPrompt) return;
         
-        // Montre l'invite d'installation
-        deferredPrompt.prompt();
+        installPrompt.style.display = 'none';
         
-        // Attend que l'utilisateur réponde à l'invite
+        deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
         
         if (outcome === 'accepted') {
-            console.log('Utilisateur a accepté l installation');
-            installPrompt.style.display = 'none';
-        } else {
-            console.log('Utilisateur a refusé l installation');
+            console.log('✅ PWA installée');
         }
         
-        // Réinitialise la variable
         deferredPrompt = null;
     });
 }
@@ -87,51 +59,8 @@ if (cancelInstall) {
     });
 }
 
-// Vérifier si l'app est déjà installée au chargement
-window.addEventListener('load', () => {
-    if (isAppInstalled()) {
-        console.log('PWA déjà installée');
-    }
-});
-
-// Événement lorsque l'app est installée
 window.addEventListener('appinstalled', () => {
-    console.log('PWA installée avec succès');
+    console.log('🎉 PWA installée avec succès!');
     installPrompt.style.display = 'none';
     deferredPrompt = null;
-});
-
-// Gestion du mode hors ligne
-window.addEventListener('online', () => {
-    console.log('Connexion rétablie');
-    document.body.classList.remove('offline');
-});
-
-window.addEventListener('offline', () => {
-    console.log('Mode hors ligne');
-    document.body.classList.add('offline');
-});
-
-// Vérification initiale du statut de connexion
-if (!navigator.onLine) {
-    document.body.classList.add('offline');
-}
-
-// Fonction utilitaire pour les notifications
-function showNotification(title, message) {
-    if (!("Notification" in window)) {
-        return;
-    }
-
-    if (Notification.permission === "granted") {
-        new Notification(title, { 
-            body: message, 
-            icon: 'favicon/web-app-manifest-192x192.png' 
-        });
-    }
-}
-
-// Vérification du manifeste au chargement
-document.addEventListener('DOMContentLoaded', () => {
-    checkManifest();
 });
